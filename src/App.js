@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import mapboxgl from 'mapbox-gl';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZXNwYWNlc2VydmljZSIsImEiOiJjbHZ1dHZjdTQwMDhrMm1uMnoxdWRibzQ4In0.NaprcMBbdX07f4eXXdr-lw';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 function App() {
   const mapContainer = useRef(null);
@@ -32,7 +32,7 @@ function App() {
     }
   }
 
-  async function fetchShipCsv() {
+  async function fetchShipCsv(path) {
     const response = await fetch('./enemy_ship.csv');
     const reader = response.body.getReader();
     const result = await reader.read();
@@ -89,7 +89,6 @@ function App() {
   
     return color;
   }
-
   useEffect(() => {
     GetData();
     GetEnemyData(); // Call to fetch ship data

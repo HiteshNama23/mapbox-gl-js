@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Ship Tracking Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This application is a React-based ship tracking system that visualizes the locations and routes of ships on a map using Mapbox GL. It fetches ship data from a CSV file and displays it on the map alongside location data obtained from another CSV file. Additionally, users can click on the map to retrieve timezone information for the clicked location, and the map style adjusts based on the timezone.
 
-## Available Scripts
+## Features
+- Display ship locations and routes on the map.
+- Click on the map to fetch timezone information for the clicked location.
+- Adjust the map style based on the timezone of the clicked location.
 
-In the project directory, you can run:
+## Technologies Used
+- React: JavaScript library for building user interfaces.
+- Mapbox GL: Mapping platform for creating custom maps.
+- PapaParse: JavaScript library for parsing CSV data.
 
-### `npm start`
+## Installation
+1. Clone the repository to your local machine:
+    ```
+    git clone https://github.com/your-username/mapbox-gl-js.git
+    ```
+2. Navigate to the project directory:
+    ```
+    cd mapbox=gl-js
+    ```
+3. Install dependencies using npm or yarn:
+    ```
+    npm install
+    # or
+    yarn install
+    ```
+4. Obtain a Mapbox access token from [Mapbox](https://www.mapbox.com/) and replace `YOUR_MAPBOX_ACCESS_TOKEN` in `App.js` with your token.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+1. Start the development server:
+    ```
+    npm start
+    # or
+    yarn start
+    ```
+2. Open your browser and navigate to `http://localhost:3000`.
+3. Explore the ship tracking application by clicking on the map and observing ship locations and routes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Files and Directory Structure
+- `App.js`: Main React component containing the application logic.
+- `enemyShip.csv`: CSV file containing ship data.
+- `location_data.csv`: CSV file containing location data.
+- `public/`: Directory containing public assets, including HTML files and CSV data.
+- `src/`: Directory containing source code files.
+- `README.md`: Documentation file.
 
-### `npm test`
+## Problems Faced During Development
+- **Handling Asynchronous Data Fetching**: One challenge was properly handling asynchronous data fetching using the `fetch` API and ensuring that the application logic executes correctly after the data is fetched.
+- **Integrating Mapbox GL with React**: Integrating Mapbox GL with React posed challenges due to differences in handling state and lifecycle methods between React components and Mapbox GL.
+- **Styling and Customization**: Adjusting the map style based on timezone information required experimenting with different Mapbox styles and understanding how to dynamically update the map style at runtime.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Credits
+- Map data provided by [Mapbox](https://www.mapbox.com/).
+- CSV parsing functionality provided by [PapaParse](https://www.papaparse.com/).
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the [MIT License](LICENSE).
